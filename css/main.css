@@ -1,0 +1,16 @@
+body{
+    background-color: #e7d7ef;
+}
+.navStyles{
+    background-color: #412a4f;
+}
+h2 {
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    font-size: 3rem;
+    border-bottom: double .2rem black;
+    border-width: .5rem;
+}
+img{
+    width: 100%;
+}
