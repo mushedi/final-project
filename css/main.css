@@ -4,7 +4,7 @@ body{
 .navStyles{
     background-color: #412a4f;
 }
-p {
+.pHome {
     margin: auto .5rem;
     padding: 1.5rem;
     border: solid 5px #412a4f;
@@ -13,7 +13,7 @@ p {
     font-size: 1.5rem;
     font-weight: 300;
 }
-.divStyles {
+.carouselCon {
     margin: auto;
     padding: .2rem;
 }
@@ -25,7 +25,7 @@ h2 {
     border-width: .5rem;
     color:  #008040;
 }
-.imgStyles{
+.carouselStyles{
     width: 85%;
     margin: 1rem 1rem 1rem 8%;
 }
