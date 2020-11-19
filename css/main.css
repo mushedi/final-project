@@ -1,9 +1,15 @@
 body{
     background-color: #f2ebfa;
 }
+
+/* NavBar Styles */
+
 .navStyles{
     background-color: #412a4f;
 }
+
+/* Home Page Styles */
+
 .pHome {
     margin: auto .5rem;
     padding: 1.5rem;
@@ -13,21 +19,51 @@ body{
     font-size: 1.5rem;
     font-weight: 300;
 }
-.carouselCon {
-    margin: auto;
-    padding: .2rem;
-}
-h2 {
-    text-align: center;
-    font-family: 'Bangers', cursive;
-    font-size: 3rem;
-    margin: auto;
-    border-width: .5rem;
-    color:  #008040;
-}
+
 .carouselStyles{
     width: 85%;
     margin: 1rem 1rem 1rem 8%;
+}
+
+.resize {
+    width: 25%;
+    margin-left: 38%;
+    padding-bottom: 4rem;
+}
+
+/* Donation Styles */
+.pDonate {
+    text-align: center;
+    font-family: 'Khand', sans-serif;
+    font-size: 1.5rem;
+    border-bottom: dashed 5px #412a4f;
+    padding-bottom: 2rem;
+
+}
+.galleryStyles {
+    border-bottom: dashed 5px #412a4f;
+    padding: 5%;
+}
+
+.galleryImg {
+    width: 60%;
+    margin: auto 20%;
+}
+.pCash {
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+.text-center a {
+    margin-bottom: 2rem;
+}
+
+/* General Styles */
+
+.containStyles {
+    margin: auto;
+    padding: .2rem;
 }
 .dots {
     border-top: 1rem dotted  #cccccc;
@@ -35,23 +71,32 @@ h2 {
     margin: 5rem auto;
     width: 15%;
 }
-.resize {
-    width: 25%;
-    margin-left: 38%;
-    padding-bottom: 4rem;
+h2 {
+    text-align: center;
+    font-family: 'Bangers', cursive;
+    font-size: 3rem;
+    margin: 5%;
+    border-width: .5rem;
+    color:  #008040;
 }
+h4 {
+    /* font-family: 'Khand', sans-serif; */
+    padding-left: 1rem;
+    color: white;
+    width: 100%;
+    display: inline;
+}
+h5 {
+    text-align: center;
+    margin-top: .5rem;
+}
+
+/* Footer Styles */
 
 .logo {
     width: 2rem;
     margin-bottom: .5rem;
     margin-left: 1rem;
-    display: inline;
-}
-h4 {
-    font-family: 'Khand', sans-serif;
-    padding-left: 1rem;
-    color: white;
-    width: 100%;
     display: inline;
 }
 footer {
