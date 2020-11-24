@@ -59,6 +59,21 @@ body{
     margin-bottom: 2rem;
 }
 
+/* Volunteer Styles */
+
+.form-control {
+    margin: 1rem auto;
+}
+.text-center button.btn-dark {
+    margin-bottom: 2rem;
+}
+
+.pVolun {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+}
+
 /* General Styles */
 
 .containStyles {
