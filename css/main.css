@@ -5,8 +5,23 @@ body{
 /* NavBar Styles */
 
 .navStyles{
+    font-family: 'Khand', sans-serif;
     background-color: #412a4f;
+    font-size: 1.2rem;
 }
+.dropitemStyles{
+    background-color: #412a4f;
+    color: rgba(255,255,255,.5);
+    font-size: 1.1rem;
+}
+.dropitemStyles:hover{
+    background-color: #412a4f;
+    color: #fcfcfc;
+}
+.dropmenuStyles {
+    padding: 0;
+}
+
 
 /* Home Page Styles */
 
@@ -105,6 +120,9 @@ h5 {
     text-align: center;
     margin-top: .5rem;
 }
+
+/* Game Styles */
+
 
 /* Footer Styles */
 
