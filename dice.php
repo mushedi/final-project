@@ -5,10 +5,10 @@ Mustache_Autoloader::register();
 $m = new Mustache_Engine;
 
 $header = file_get_contents('templates/header.html');
-$body = file_get_contents('templates/donations.html');
+$body = file_get_contents('templates/dice.html');
 $footer = file_get_contents('templates/footer.html');
 
-$header_data = ["title" => "Donations"];
+$header_data = ["title" => "Dice Game"];
 
 echo $m->render($header, $header_data) . PHP_EOL;
 echo $m->render($body) . PHP_EOL;
