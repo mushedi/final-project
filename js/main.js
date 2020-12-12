@@ -97,8 +97,22 @@ $(document).ready(function(){
     $('#clearBtn').click(function () {
         clearForm();
     });
-
     $('#volun').click(function () {
         validate();
+    });
+    $('#player1').click(function(){
+        location.href = "gameP1.php";
+
+    });
+    $('#player2').click(function(){
+        location.href= "gameP2.php";
+    });
+    $('#p1Roll').click(function(){
+        let diceRoll = (Math.floor(Math.random() * 6) + 1);
+        $('#dice1').attr('src', 'images/dice'+diceRoll+'.png');
+    });
+    $('#p2Roll').click(function(){
+        let diceRoll = (Math.floor(Math.random() * 6) + 1);
+        $('#dice2').attr('src' , 'images/dice'+diceRoll+'.png');
     });
 });
