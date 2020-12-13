@@ -1,3 +1,5 @@
+/* Azul Lanas
+Date: 12/13/2020 */
 
 function validateEmail(x) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -11,6 +13,7 @@ function validateChar(x){
     let re = /^[A-Z]+$/i;
     return re.test(x);
 }
+
 function sendData(fullName, email, pronouns, race, msg){
     $.ajax({
         url: 'volunSub.php',
@@ -82,6 +85,38 @@ function validate(){
         $('#msg').html(errMsg);
     }
 }
+function gameMode(x){
+    location.href= "gameP"+ x +".php";
+}
+function dateMath(){
+    let date1 = new Date($('#datepicker').val());
+    let date2 = new Date;
+    let timeDiff = date2.getTime() - date1.getTime();
+    timeDiff = Math.abs(Math.floor(timeDiff / (1000*3600*24)));
+    if(isNaN(timeDiff)){
+        $('#msg').html('Please pick a day');
+    }else{
+        date1 = (date1.getMonth() + 1)+'/'+ date1.getDate()+'/'+date1.getFullYear();
+        date2 = (date2.getMonth() + 1)+'/'+ date2.getDate()+'/'+date2.getFullYear();
+        $.ajax({
+            url: 'dateVal.php',
+            type: 'POST',
+            data: {date1: date1, date2: date2, timeDiff: timeDiff},
+            success: function(val){
+                $("#msg").css("color", "black");
+                if(val === '1'){
+                    $("#msg").html('The date you chose is ' + val + ' day away!');
+                } else {
+                    $("#msg").html('The date you chose is ' + val + ' days away!');
+                }
+            },
+            error: function(val){
+                $("#msg").html("Please make sure you pick a proper date");
+            }
+        });
+    }
+    
+}
 
 function clearForm(){
     $('#fullName').val('');
@@ -101,11 +136,11 @@ $(document).ready(function(){
         validate();
     });
     $('#player1').click(function(){
-        location.href = "gameP1.php";
+        gameMode(1);
 
     });
     $('#player2').click(function(){
-        location.href= "gameP2.php";
+        gameMode(2);
     });
     $('#p1Roll').click(function(){
         let diceRoll = (Math.floor(Math.random() * 6) + 1);
@@ -114,5 +149,12 @@ $(document).ready(function(){
     $('#p2Roll').click(function(){
         let diceRoll = (Math.floor(Math.random() * 6) + 1);
         $('#dice2').attr('src' , 'images/dice'+diceRoll+'.png');
+    });
+    $('#datepicker').datepicker({
+        format: 'yyyy-mm-dd',
+        minDate: 0
+    });
+    $('#findOut').click(function (){
+        dateMath();
     });
 });

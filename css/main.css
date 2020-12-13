@@ -1,3 +1,6 @@
+/* Azul Lanas
+Date: 12/13/2020 */
+
 body{
     background-color: #f2ebfa;
 }
@@ -150,6 +153,20 @@ h5 {
     margin: 1rem;
 }
 
+/* How Long */
+#ui-datepicker-div{
+    min-width: 200px;
+}
+.date{
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+    font-family: 'Khand', sans-serif;
+    font-size: 1.5rem;
+}
+#findOut {
+    margin-top: 4rem;
+}
 
 /* Footer Styles */
 
@@ -163,3 +180,14 @@ footer {
     background-color: #412a4f;
     padding-top: 1rem;
 }
+
+
+@media screen and (min-width: 1000px){
+    .carouselStyles {
+        width: 35%;
+        margin: 1rem 1rem 1rem 35%;
+    }
+    #datepicker {
+        max-width: 40%;
+    }
+} 
