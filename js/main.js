@@ -104,13 +104,7 @@ function dateMath(){
             data: {date1: date1, date2: date2},
             success: function(val){
                 $("#msg").css("color", "black");
-                console.log(val);
-                console.log(typeof val);
-                if(val == 1){
-                    $("#msg").html('The date you chose is ' + val + ' day away!');
-                } else {
-                    $("#msg").html('The date you chose is ' + val + ' days away!');
-                }
+                $("#msg").html('The date you chose is ' + val + ' day(s) away!');
             },
             error: function(val){
                 $("#msg").html("Please make sure you pick a proper date");
