@@ -5,7 +5,7 @@ Date: 12/13/2020 */ -->
 
     
 if (!empty($_POST)) {
-    if(!empty($_POST["date1"]) && !empty($_POST["date2"]) && !empty($_POST["timeDiff"])){ 
+    if(!empty($_POST["date1"]) && !empty($_POST["date2"])){ 
 
         $date1 = $_POST['date1'];
         $date2 = $_POST['date2'];
