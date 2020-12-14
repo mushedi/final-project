@@ -106,7 +106,7 @@ function dateMath(){
                 $("#msg").css("color", "black");
                 console.log(val);
                 console.log(typeof val);
-                if(val === '1'){
+                if(val === 1){
                     $("#msg").html('The date you chose is ' + val + ' day away!');
                 } else {
                     $("#msg").html('The date you chose is ' + val + ' days away!');
