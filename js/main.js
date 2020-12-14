@@ -101,9 +101,11 @@ function dateMath(){
         $.ajax({
             url: 'dateVal.php',
             type: 'POST',
-            data: {date1: date1, date2: date2, timeDiff: timeDiff},
+            data: {date1: date1, date2: date2},
             success: function(val){
                 $("#msg").css("color", "black");
+                console.log(val);
+                console.log(typeof val);
                 if(val === '1'){
                     $("#msg").html('The date you chose is ' + val + ' day away!');
                 } else {
